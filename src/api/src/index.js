@@ -1,4 +1,4 @@
-const { serverFactory } = require('./server-factory')
+const { serverFactory } = require('./server/factory')
 
 const server = serverFactory()
 
