@@ -1,13 +1,6 @@
-const restify = require('restify');
+const { serverFactory } = require('./server-factory')
 
-function respond(req, res, next) {
-  res.send('hello')
-  next()
-}
-
-const server = restify.createServer();
-
-server.get('/', respond)
+const server = serverFactory()
 
 server.listen(8081, () => {
   console.log('%s listening at %s', server.name, server.url)

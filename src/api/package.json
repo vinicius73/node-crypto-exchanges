@@ -9,6 +9,11 @@
     "dev": "yarn && pm2-runtime start app.js --watch"
   },
   "dependencies": {
-    "restify": "^6.3.4"
+    "boom": "^7.1.1",
+    "filter-files": "^0.4.0",
+    "is-directory": "^0.3.1",
+    "lodash": "^4.17.4",
+    "restify": "^6.3.4",
+    "table": "^4.0.2"
   }
 }
