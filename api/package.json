@@ -1,0 +1,14 @@
+{
+  "name": "crypto-exchanges-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Vinicius Reis <luiz.vinicius73@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn && pm2-runtime start app.js",
+    "dev": "yarn && pm2-runtime start app.js --watch"
+  },
+  "dependencies": {
+    "restify": "^6.3.4"
+  }
+}
