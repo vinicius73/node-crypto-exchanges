@@ -1,3 +1,4 @@
+const { isError } = require('lodash')
 const Boom = require('boom')
 
 /**
@@ -20,8 +21,16 @@ const tryCatch = fn => {
  * @param  {Error}            e
  */
 const sendError = (res, e) => {
-  const output = Boom.boomify(e).output
-  res.send(output.statusCode, output)
+  try {
+    const error = isError(e) ? e : new Error(e)
+    const output = Boom.boomify(e).output
+    
+    console.error(e.message)
+
+    res.send(output.statusCode, output)
+  } catch (error) {
+    res.send(500, error)
+  }  
 }
 
 /**
@@ -36,7 +45,7 @@ const wrapMiddleware = middleware => {
       .then(result => {
         res.json(result)
       })
-      .catch(sendError)
+      .catch(e => sendError(res, e))
   }
 }
 

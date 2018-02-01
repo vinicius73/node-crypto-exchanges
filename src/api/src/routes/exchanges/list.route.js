@@ -1,5 +1,10 @@
+const { map, omit } = require('lodash')
+
+const omitPrivateKeys = list => map(list, row => omit(row.toObject(), ['_id', '__v']))
+
 const handler = (req, res) => {
-  return { ok: true }
+  return req.$models.Exchange.find()
+    .then(omitPrivateKeys)
 }
 
 module.exports = {
