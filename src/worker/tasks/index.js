@@ -1,3 +1,4 @@
 module.exports = [
-  require('./importer')
+  require('./exchanges-importer'),
+  require('./order_book_importer'),
 ]
