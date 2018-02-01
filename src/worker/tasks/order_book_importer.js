@@ -5,7 +5,7 @@ const updateBooksEntrys = (Model, list) =>
     .then(() => Model.create(list))
 
 module.exports = {
-  cronTime: '*/60 * * * * *',
+  cronTime: '* */30 * * * *',
   name: 'Order Book Importer',
   init(models) {
     return this.handler(models)

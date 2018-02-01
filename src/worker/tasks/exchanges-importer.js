@@ -8,7 +8,7 @@ const createOrUpdate = (Exchange, data) => {
 }
 
 module.exports = {
-  cronTime: '*/15 * * * * *',
+  cronTime: '* */60 * * * *',
   name: 'Exchanges Importer',
   init (models)  {
     return this.handler(models)
