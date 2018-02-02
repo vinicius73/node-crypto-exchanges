@@ -6,5 +6,4 @@ const BookEntry = new Schema({
   btc_volume: Number
 })
 
-
 module.exports = BookEntry

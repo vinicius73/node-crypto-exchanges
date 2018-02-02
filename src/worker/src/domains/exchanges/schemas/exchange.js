@@ -12,10 +12,10 @@ const Exchange = new Schema({
     out_BRL: [Number, Number],
     out_BTC: [Number, Number],
     trade_book: [Number, Number],
-    trade_market: [Number, Number],
+    trade_market: [Number, Number]
   }
 })
 
-Exchange.plugin(require('mongoose-create-or-update'));
+Exchange.plugin(require('mongoose-create-or-update'))
 
 module.exports = Exchange

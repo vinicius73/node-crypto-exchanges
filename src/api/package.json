@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "start": "yarn && pm2-runtime start app.js",
-    "dev": "yarn && pm2-runtime start app.js --watch"
+    "dev": "yarn && pm2-runtime start app.js --watch",
+    "lint": "eslint src/** --fix"
   },
   "dependencies": {
     "boom": "^7.1.1",

@@ -1,10 +1,8 @@
 const { map } = require('ramda')
 const { createHttpClient } = require('./http-client')
 
-
-
 const normalizeBookEntry = entry => {
-  const [exchange, price, btc_volume] = entry
+  const [exchange, price, btc_volume] = entry // eslint-disable-line camelcase
   return { exchange, price, btc_volume }
 }
 

@@ -3,8 +3,8 @@ const { createHttpClient } = require('./http-client')
 const normalizeData = data => {
   return Object.keys(data)
     .reduce((acc, legend) => {
-      const value = { legend,...data[legend]}
-      return [...acc, value] 
+      const value = { legend, ...data[legend] }
+      return [...acc, value]
     }, [])
 }
 

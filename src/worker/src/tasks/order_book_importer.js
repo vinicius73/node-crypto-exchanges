@@ -7,10 +7,10 @@ const updateBooksEntrys = (Model, list) =>
 module.exports = {
   cronTime: '* */30 * * * *',
   name: 'Order Book Importer',
-  init(models) {
+  init (models) {
     return this.handler(models)
   },
-  handler({ Bids, Asks }) {
+  handler ({ Bids, Asks }) {
     return loadOrdersBook()
       .then(orders => {
         const promises = [updateBooksEntrys(Bids, orders.bids), updateBooksEntrys(Asks, orders.asks)]

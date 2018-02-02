@@ -2,7 +2,6 @@ const { loadExchanges } = require('../domains/bitvalor/load-exchanges')
 
 const createOrUpdate = (Exchange, data) => {
   const conditions = { legend: data.legend }
-  const options = { new: true }
 
   return Exchange.createOrUpdate(conditions, data)
 }
@@ -10,10 +9,10 @@ const createOrUpdate = (Exchange, data) => {
 module.exports = {
   cronTime: '* */60 * * * *',
   name: 'Exchanges Importer',
-  init (models)  {
+  init (models) {
     return this.handler(models)
   },
-  handler ({ Exchange }) {  
+  handler ({ Exchange }) {
     return loadExchanges()
       .then(data => {
         const promises = data.map(row => createOrUpdate(Exchange, row))
