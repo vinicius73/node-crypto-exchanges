@@ -3,7 +3,7 @@ const { modelsFactory } = require('../exchanges/models-factory')
 
 const modelsMiddleware = (req, res, next) => {
   let $cache
-  
+
   Object.defineProperty(req, '$models', {
     get: () => {
       if ($cache) {
@@ -18,7 +18,7 @@ const modelsMiddleware = (req, res, next) => {
   })
 
   next()
-} 
+}
 
 const install = server => {
   server.use(modelsMiddleware)

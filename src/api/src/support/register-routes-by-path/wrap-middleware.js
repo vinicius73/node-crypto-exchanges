@@ -23,14 +23,14 @@ const tryCatch = fn => {
 const sendError = (res, e) => {
   try {
     const error = isError(e) ? e : new Error(e)
-    const output = Boom.boomify(e).output
-    
+    const output = Boom.boomify(error).output
+
     console.error(e.message)
 
     res.send(output.statusCode, output)
   } catch (error) {
     res.send(500, error)
-  }  
+  }
 }
 
 /**

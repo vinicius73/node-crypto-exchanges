@@ -9,7 +9,7 @@ const serverFactory = () => {
 
   installPlugins(server)
   registerRoutesByPath(server, path.join(__dirname, '../routes'))
-  
+
   return server
 }
 
