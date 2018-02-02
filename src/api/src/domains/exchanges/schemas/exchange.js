@@ -3,6 +3,7 @@ const { Schema } = require('mongoose')
 const Exchange = new Schema({
   legend: String,
   color: String,
+  name: String,
   url: String,
   url_book: String,
   fees: {

@@ -1,10 +1,8 @@
-const { map, omit } = require('lodash')
-
-const omitPrivateKeys = list => map(list, row => omit(row.toObject(), ['_id', '__v']))
+const { omitPrivateKeysFromList } = require('../../support/utils/mongoose')
 
 const handler = (req, res) => {
   return req.$models.Exchange.find()
-    .then(omitPrivateKeys)
+    .then(omitPrivateKeysFromList)
 }
 
 module.exports = {
