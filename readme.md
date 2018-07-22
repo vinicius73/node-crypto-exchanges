@@ -1,5 +1,7 @@
 # Node Crypto Exchanges
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/vinicius73/node-crypto-exchanges.svg)](https://greenkeeper.io/)
+
 ## run
 
 > dev mode
