@@ -1,0 +1,10 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "src/api/package.json",
+        "src/worker/package.json"
+      ]
+    }
+  }
+}
