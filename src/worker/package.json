@@ -10,7 +10,7 @@
     "lint": "eslint src/** --fix"
   },
   "dependencies": {
-    "axios": "^0.17.1",
+    "axios": "^0.18.0",
     "lodash": "^4.17.4",
     "mongoose": "^5.0.2",
     "mongoose-create-or-update": "^1.0.3",
@@ -18,10 +18,10 @@
     "ramda": "^0.25.0"
   },
   "devDependencies": {
-    "eslint": "^4.16.0",
+    "eslint": "^5.2.0",
     "eslint-config-standard": "^11.0.0-beta.0",
     "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1"
   }
